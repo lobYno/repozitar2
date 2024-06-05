@@ -77,10 +77,10 @@ echo "</table>";
 
 <h1>požiadavka 04</h1>
 <?php
-$sql = "SELECT COUNT(*) as order_count FROM orders WHERE YEAR(OrderDate) = 1997";
+$sql = "SELECT COUNT(*) as order_count FROM orders WHERE YEAR(OrderDate) = 1995";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
-echo "<p>Počet objednávok uskutočnených v roku 1997: {$row['order_count']}</p>";
+echo "<p>Počet objednávok uskutočnených v roku 1995: {$row['order_count']}</p>";
 ?>
 
 <h1>požiadavka 05</h1>
@@ -97,7 +97,7 @@ echo "</table>";
 
 <h1>požiadavka 06</h1>
 <?php
-$sql = "SELECT * FROM orders WHERE OrderDate = '1997-05-19'";
+$sql = "SELECT * FROM orders WHERE OrderDate = '1995-09-28'";
 $result = $conn->query($sql);
 echo "<table>";
 while ($fieldinfo = $result->fetch_field()) {
@@ -117,4 +117,3 @@ echo "</table>";
 
 </body>
 </html>
-
